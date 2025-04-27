@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HanneyCutz | Premium Mobile Barber Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Hanney<span>Cutz</span></a>
+            <div class="nav-toggle" id="navToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#booking">Book Now</a></li>
+                <li><a href="#location">Find Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Premium Barber Services <span>On The Go</span></h1>
+                <p>Experience luxury grooming wherever you are with HanneyCutz mobile barber van</p>
+                <a href="#booking" class="btn">Book Your Cut</a>
+            </div>
+            <div class="hero-image">
+                <div class="image-frame"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-image">
+                <div class="image-frame"></div>
+            </div>
+            <div class="about-content">
+                <h2>Meet Sean Hanney</h2>
+                <p>With over 10 years of experience in premium barbering, Sean brings the barbershop experience directly to you. Trained in Dublin's finest establishments, he's now taking his craft on the road with the HanneyCutz mobile van.</p>
+                <p>Every cut is a work of art, performed with precision tools and premium products in our custom-designed mobile studio.</p>
+                <div class="signature">
+                    <img src="signature.png" alt="Sean Hanney Signature">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p class="section-subtitle">Premium grooming at competitive prices</p>
+            
+            <div class="services-grid">
+                <!-- Hair Services -->
+                <div class="service-category">
+                    <h3>Hair Services</h3>
+                    <ul class="service-list">
+                        <li>
+                            <span class="service-name">Gents Dry Cut</span>
+                            <span class="service-price">€30</span>
+                        </li>
+                        <li>
+                            <span class="service-name">Students Dry Cut (Secondary and University)</span>
+                            <span class="service-price">€25</span>
+                        </li>
+                        <li>
+                            <span class="service-name">Child Dry Cut (Primary)</span>
+                            <span class="service-price">€20</span>
+                        </li>
+                        <li>
+                            <span class="service-name">OAP/Clipper Cut</span>
+                            <span class="service-price">€15</span>
+                        </li>
+                        <li>
+                            <span class="service-name">Wash and Cut</span>
+                            <span class="service-price">€35</span>
+                        </li>
+                        <li>
+                            <span class="service-name">Restyle/Long Haircut</span>
+                            <span class="service-price">€50</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Beard Services -->
+                <div class="service-category">
+                    <h3>Beard Services</h3>
+                    <ul class="service-list">
+                        <li>
+                            <span class="service-name">Beard Trim Tidy</span>
+                            <span class="service-price">€20</span>
+                        </li>
+                        <li>
+                            <span class="service-name">Beard Trim Hot Towel</span>
+                            <span class="service-price">€25</span>
+                        </li>
+                        <li>
+                            <span class="service-name">Hot Towel Shave</span>
+                            <span class="service-price">€40</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Special Packages -->
+                <div class="service-category">
+                    <h3>Special Packages</h3>
+                    <ul class="service-list">
+                        <li>
+                            <span class="service-name">Dry Cut & Beard Trim Tidy</span>
+                            <span class="service-price">€40</span>
+                        </li>
+                        <li>
+                            <span class="service-name">Dry Cut & Beard Trim Hot Towel</span>
+                            <span class="service-price">€50</span>
+                        </li>
+                        <li>
+                            <span class="service-name">Dry Cut & Hot Towel Shave</span>
+                            <span class="service-price">€50</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking" id="booking">
+        <div class="container">
+            <h2>Book Your Appointment</h2>
+            <p class="section-subtitle">Select your service and preferred time</p>
+            
+            <div class="booking-container">
+                <div class="booking-form">
+                    <form id="appointmentForm">
+                        <div class="form-group">
+                            <label for="service">Service</label>
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected>Select a service</option>
+                                <optgroup label="Hair Services">
+                                    <option value="gents-dry-cut">Gents Dry Cut - €30</option>
+                                    <option value="students-dry-cut">Students Dry Cut - €25</option>
+                                    <option value="child-dry-cut">Child Dry Cut - €20</option>
+                                    <option value="oap-cut">OAP/Clipper Cut - €15</option>
+                                    <option value="wash-cut">Wash and Cut - €35</option>
+                                    <option value="restyle">Restyle/Long Haircut - €50</option>
+                                </optgroup>
+                                <optgroup label="Beard Services">
+                                    <option value="beard-trim">Beard Trim Tidy - €20</option>
+                                    <option value="beard-hot-towel">Beard Trim Hot Towel - €25</option>
+                                    <option value="hot-towel-shave">Hot Towel Shave - €40</option>
+                                </optgroup>
+                                <optgroup label="Special Packages">
+                                    <option value="dry-beard-trim">Dry Cut & Beard Trim Tidy - €40</option>
+                                    <option value="dry-beard-hot-towel">Dry Cut & Beard Trim Hot Towel - €50</option>
+                                    <option value="dry-hot-towel-shave">Dry Cut & Hot Towel Shave - €50</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="text" id="date" name="date" placeholder="Select date" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="time">Time</label>
+                            <select id="time" name="time" required disabled>
+                                <option value="" disabled selected>Select time</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="notes">Special Requests</label>
+                            <textarea id="notes" name="notes" rows="3"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Confirm Booking</button>
+                    </form>
+                </div>
+                
+                <div class="booking-calendar">
+                    <div id="calendar"></div>
+                    <div class="opening-hours">
+                        <h4>Opening Hours</h4>
+                        <ul>
+                            <li><span>Mon</span> <span>09:30 - 18:30</span></li>
+                            <li><span>Tue</span> <span>09:30 - 18:30</span></li>
+                            <li><span>Wed</span> <span>09:30 - 18:30</span></li>
+                            <li><span>Thu</span> <span>09:30 - 18:30</span></li>
+                            <li><span>Fri</span> <span>09:30 - 18:30</span></li>
+                            <li><span>Sat</span> <span>09:00 - 17:00</span></li>
+                            <li><span>Sun</span> <span>Closed</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location" id="location">
+        <div class="container">
+            <h2>Find The Van</h2>
+            <p class="section-subtitle">See our current location and status</p>
+            
+            <div class="location-container">
+                <div class="location-info">
+                    <div class="status-indicator">
+                        <div class="status-dot" id="statusDot"></div>
+                        <span id="statusText">Checking status...</span>
+                    </div>
+                    <div class="current-location">
+                        <h4>Current Location</h4>
+                        <p id="currentLocation">Loading location data...</p>
+                    </div>
+                    <div class="next-available">
+                        <h4>Next Available</h4>
+                        <p id="nextAvailable">Checking availability...</p>
+                    </div>
+                    <div class="contact-info">
+                        <h4>Contact</h4>
+                        <p><i class="fas fa-phone"></i> +353 87 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> bookings@hanneycutz.com</p>
+                    </div>
+                </div>
+                
+                <div class="location-map">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">Hanney<span>Cutz</span></a>
+                    <p>Premium mobile barber services<br>Dublin & surrounding areas</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#booking">Book Now</a></li>
+                        <li><a href="#location">Find Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +353 87 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> bookings@hanneycutz.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Serving Dublin Area</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 HanneyCutz. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts will be loaded here -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
