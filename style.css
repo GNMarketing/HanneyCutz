@@ -691,3 +691,43 @@ a {
 .mapboxgl-popup-close-button {
     color: var(--primary-light) !important;
 }
+
+
+
+/* Ajoutez ces règles à votre fichier CSS existant */
+
+/* Styles pour tous les éléments de formulaire */
+select, input, textarea {
+    background-color: rgba(30, 30, 30, 0.9) !important;
+    color: #f5f5f5 !important;
+    border: 1px solid rgba(245, 245, 245, 0.3) !important;
+    border-radius: var(--border-radius) !important;
+    padding: 12px 15px !important;
+    font-size: 16px !important;
+    transition: var(--transition) !important;
+}
+
+/* Style spécifique pour les select */
+select {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f5f5f5'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 15px center !important;
+    background-size: 20px !important;
+    padding-right: 40px !important;
+}
+
+/* Style au focus */
+select:focus, input:focus, textarea:focus {
+    outline: none !important;
+    border-color: var(--wood-accent) !important;
+    box-shadow: 0 0 0 2px rgba(139, 90, 43, 0.3) !important;
+}
+
+/* Style des options dans le select */
+select option {
+    background-color: #1a1a1a !important;
+    color: #f5f5f5 !important;
+    padding: 
