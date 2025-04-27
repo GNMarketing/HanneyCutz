@@ -730,4 +730,42 @@ select:focus, input:focus, textarea:focus {
 select option {
     background-color: #1a1a1a !important;
     color: #f5f5f5 !important;
-    padding: 
+    padding: 10px 15px !important;
+}
+
+/* Style pour les groupes d'options */
+optgroup {
+    background-color: #2a2a2a !important;
+    color: var(--wood-accent) !important;
+    font-weight: bold !important;
+}
+
+/* Style pour Flatpickr (le calendrier) */
+.flatpickr-calendar {
+    background-color: #1a1a1a !important;
+    color: #f5f5f5 !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) !important;
+}
+
+.flatpickr-day {
+    color: #f5f5f5 !important;
+}
+
+.flatpickr-day.selected {
+    background-color: var(--wood-accent) !important;
+    border-color: var(--wood-accent) !important;
+}
+
+.flatpickr-day.today {
+    border-color: var(--wood-light) !important;
+}
+
+.flatpickr-day:hover {
+    background-color: rgba(139, 90, 43, 0.3) !important;
+}
+
+/* Correction pour le texte dans les inputs */
+input::placeholder {
+    color: rgba(245, 245, 245, 0.5) !important;
+    opacity: 1 !important;
+}
